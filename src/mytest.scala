@@ -76,8 +76,8 @@ object mytest {
     def encode1(l:List[String]):List[(Int,String)] = {
 
       l match {
-        case Nil => Nil
-        case x::y => encode1(y) match {
+          case Nil => Nil
+          case x::y => encode1(y) match {
           case (c,  `x`)::rest =>(c+1,x)::rest
           case rest => (1, x)::rest
         }
